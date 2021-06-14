@@ -1,0 +1,142 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%); /* Background */ 
+    --vary-dark-blue: hsl(229, 23%, 23%); /* Headings */
+    --dark-grayish-blue: hsl(227, 10%, 46%); /* Texts */
+    --dark-gray: hsl(0, 0%, 59%); /* Texts */
+
+    --ff-kumbh: 'Kumbh Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-kumbh);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--dark-gray);
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--dark-cyan);
+    position: relative;
+}
+
+.circle-top {
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    z-index: -99;
+}
+.circle-bottom {
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    z-index: -99;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    border-radius: 8px 8px 8px 8px;
+    background-color: white;
+    box-shadow: -1px 1px 19px -1px rgba(0,0,0,0.44);
+    -webkit-box-shadow: -1px 1px 19px -1px rgba(0,0,0,0.44);
+    -moz-box-shadow: -1px 1px 19px -1px rgba(0,0,0,0.44);
+}
+
+.banner img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+}
+
+.about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid hsla(0, 0%, 50%, 0.288);;
+}
+.about .profile-picture {
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+    top: -50%;
+    left: 35%;
+}
+.name-age {
+    display: flex;
+    margin-top: 17%;
+}
+.name-age h1{
+    margin-right: 8px;
+    font-weight: 700;
+    color: var(--vary-dark-blue);
+}
+.location {
+    font-size: 15px;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 20px;
+}
+.stat {
+    text-align: center;
+}
+.stat h1 {
+    color: var(--vary-dark-blue);
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.stat p {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.attribution {
+    margin-top: 20px;
+    display: flex;
+    font-weight: 400;
+}
+.attribution p {
+    margin: 3px;
+    color: var(--vary-dark-blue);
+}
+.attribution a {
+    color: var(--vary-dark-blue);
+}
+
+@media screen and (max-width: 480px) {
+    .card {  
+        width: 80%;
+    }
+
+    .attribution {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle-top {
+        top: -70%;
+        left: -200%;
+    }
+    .circle-bottom {
+        top: 50%;
+        left: 30%;
+    }
+}
